@@ -17,7 +17,7 @@ export default function OrderDetails() {
     <Page>
       {isLoading ? null : (
         <Fragment>
-          <GoBackLink to="/dashboard/orders">Regresar</GoBackLink>
+          <GoBackLink to="/dashboard/orders">To return</GoBackLink>
 
           <OrderId>
             Nº ID:<span>{thisOrder?.orderID}</span>
@@ -30,31 +30,31 @@ export default function OrderDetails() {
             refreshState={isRefreshing}
           />
 
-          <h3>Detalles de envio</h3>
+          <h3>Shipment details</h3>
 
           <ClientInfo>
             <p>
-              <b>Destinatario:</b>
+              <b>Name:</b>
               {thisOrder?.client[0]?.name}
             </p>
             <p>
-              <b>Dirrección:</b>
+              <b>Direction:</b>
               {thisOrder?.client[0]?.address}
             </p>
             <p>
-              <b>Teléfono:</b>
+              <b>Telephone:</b>
               {thisOrder?.client[0]?.number}
             </p>
           </ClientInfo>
           <br></br>
 
-          <h3>Detalles del pedido</h3>
+          <h3>Order details</h3>
           <DetailTable>
             <thead>
               <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Unidades</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Units</th>
                 <th>Total</th>
               </tr>
             </thead>

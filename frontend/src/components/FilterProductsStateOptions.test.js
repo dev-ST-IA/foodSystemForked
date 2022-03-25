@@ -13,7 +13,7 @@ it('has "all" as a default value', ()=>{
     
   expect(screen.getByText('Todos')).toHaveValue('all')
   
-   expect(screen.getByRole('combobox')).toHaveDisplayValue('Todos')
+   expect(screen.getByRole('combobox')).toHaveDisplayValue('all')
 
 } )
 
@@ -36,7 +36,7 @@ fireEvent.change(screen.getByRole('combobox'), {
 })
  expect(setStatePreferece.mock.calls.length).toBe(1)
 
- expect(screen.getByRole('combobox')).toHaveDisplayValue('Inactivos')
+ expect(screen.getByRole('combobox')).toHaveDisplayValue('Inactive')
 
 fireEvent.change(screen.getByRole('combobox'), {
   target: {
@@ -47,6 +47,6 @@ fireEvent.change(screen.getByRole('combobox'), {
  expect(setStatePreferece.mock.calls.length).toBe(2)
 
  
- expect(screen.getByRole('combobox')).toHaveDisplayValue('Activos')
+ expect(screen.getByRole('combobox')).toHaveDisplayValue('Active')
   
 })

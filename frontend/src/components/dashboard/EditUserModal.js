@@ -79,11 +79,11 @@ export default function EditUserForm({ user, isEditing, setIsEditing }) {
     <EditModal isEditing={isEditing}>
       <EditTable>
         <EditTableHeader>
-          <TableTitle>Editar Usuario</TableTitle>
+          <TableTitle>Edit User</TableTitle>
         </EditTableHeader>
         <EditTableBody>
           <h3>{user?.name}</h3>
-          <h4>Selecciónar Roles</h4>
+          <h4>Select Roles</h4>
 
           <EditForm
             onSubmit={(e) => handelSubmit(e, user._id)}

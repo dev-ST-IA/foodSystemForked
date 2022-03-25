@@ -18,7 +18,7 @@ export default function useCategoriesForms() {
     e.preventDefault();
     e.stopPropagation();
     const confirmation = window.confirm(
-      "Al eliminar la categoría se eliminarn todos los productos de la misma, está deguro?"
+      "When you delete the category, all the products in it will be deleted, are you sure?"
     );
     const onSuccess = () => {
       setIsDeleteFormLoading(false);

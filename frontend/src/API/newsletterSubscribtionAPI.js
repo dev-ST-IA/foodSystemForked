@@ -12,7 +12,7 @@ const newsletterSubscribtionAPI = async ({ info, setIsSuccessfullySend }) => {
       }, 3000);
     }
     if (response.status === 500)
-      alert("Error en el servidor, vuelva a interntar");
+      alert("Server error, please try again");
   } catch (err) {
     console.log(err);
   }

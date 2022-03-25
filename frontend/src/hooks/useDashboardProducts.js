@@ -81,7 +81,7 @@ export default function useDashboardProducts() {
         setIsLoading(false);
       } catch (err) {
         if (err.name === "AbortError") {
-          console.log("Fetch Canseled: caught abort");
+          console.log("Fetch Canceled: caught abort");
         } else {
           console.log(err);
         }

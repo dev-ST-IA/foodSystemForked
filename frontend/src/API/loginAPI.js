@@ -58,7 +58,7 @@ async function loginAPI({
 
     setIsLoading(false);
     setServerError(
-      "A ocurrido un error en el servidor, por favor intente de nuevo"
+      "A server error has occurred, please try again"
     );
   }
 }

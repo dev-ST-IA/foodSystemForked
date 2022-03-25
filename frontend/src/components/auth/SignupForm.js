@@ -92,16 +92,16 @@ export function UserNameInput({ register, errors, defaultValue }) {
         <ErrorMessage>{errors.userName.message}</ErrorMessage>
       )}
       <TextInput
-        placeholder="Tu nombre..."
+        placeholder="Your name..."
         name="userName"
         type="text"
         defaultValue={defaultValue || ""}
         data-testid="nameInput"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           pattern: {
             value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü]+$/,
-            message: "*Nombre no valido",
+            message: "*invalid name",
           },
         })}
         style={{ borderColor: errors.userName && "#bf0000" }}
@@ -117,15 +117,15 @@ export function UserLastNameInput({ register, errors, defaultValue }) {
       )}
       <TextInput
         type="text"
-        placeholder="Tu apellido ..."
+        placeholder="Your last name ..."
         data-testid="lastNameInput"
         defaultValue={defaultValue || ""}
         name="userLastName"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           pattern: {
             value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü]+$/,
-            message: "*Apellido no valido",
+            message: "*Invalid last name",
           },
         })}
         style={{ borderColor: errors.userLastName && "#bf0000" }}
@@ -145,12 +145,12 @@ export function UserEmailInput({ register, errors }) {
         name="userEmail"
         data-testid="emailInput"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
 
           pattern: {
             value:
               /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
-            message: "*Email no valido",
+            message: "*Email not Valid",
           },
         })}
         style={{ borderColor: errors.userEmail && "#bf0000" }}
@@ -175,10 +175,10 @@ export function UserPasswordInput({
         data-testid="passwordInput"
         autocomplete={false}
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           minLength: {
             value: 5,
-            message: "*El largo mínimo es de 5 carácteres",
+            message: "*The minimum length is 5 characters",
           },
         })}
         style={{ borderColor: errors[name] && "#bf0000" }}
@@ -198,10 +198,10 @@ export function UserNewPasswordInput({ register, errors, placeholder }) {
         type="password"
         name="userNewPassword"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           minLength: {
             value: 5,
-            message: "*El largo mínimo es de 5 carácteres",
+            message: "*The minimum length is 5 characters",
           },
         })}
         style={{ borderColor: errors.userNewPassword && "#bf0000" }}
@@ -228,15 +228,15 @@ export default function SignupForm() {
         <UserPasswordInput
           errors={errors}
           register={register}
-          placeholder="Tu contraseña..."
+          placeholder="Your password..."
         />
 
         <ErrorServerMessage>{serverError}</ErrorServerMessage>
 
         <FormLink to="/authentication/login">
-          ¿Ya tienes una cuenta? <b>Login</b>{" "}
+        Do you already have an account? <b>Login</b>{" "}
         </FormLink>
-        <ButtonPrimary as="input" type="submit" value="Sing Up" />
+        <ButtonPrimary as="input" type="submit" value="Sign Up" />
         {isFormLoading && <LoaderSpinner data-testid="spinner" small />}
       </Form>
     </FormCard>

@@ -110,10 +110,10 @@ export default function ShoppingCart() {
           <LoaderSpinner data-testid="spinner" small />
         ) : (
           <>
-            <MakeOrderButton onClick={handelOrder}>Ordenar</MakeOrderButton>
+            <MakeOrderButton onClick={handelOrder}>Order</MakeOrderButton>
 
             <DeleteAllButton onClick={emptyCartAndResetTotalCost}>
-              Vaciar Carrito
+            Empty Cart
             </DeleteAllButton>
           </>
         )}

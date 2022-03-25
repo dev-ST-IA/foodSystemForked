@@ -82,16 +82,12 @@ export default function About() {
     <StyledAbout>
       <AboutWrapper cassName="flex">
         <HistorySection>
-          <SectionTitle>Sobre Nosotros</SectionTitle>
+          <SectionTitle>About us</SectionTitle>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            temporibus quod itaque mollitia quidem. Eos nemo nam corrupti ipsam
-            iusto facilis sit blanditiis, placeat omnis amet voluptatem. Dolor,
-            recusandae atque?. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Incidunt voluptates quasi corporis nihil pariatur
-            repudiandae debitis! Sed sit, quaerat laudantium consectetur
-            quibusdam ab aut laboriosam veniam ducimus. Odit, sed aperiam!
+          Home Sorrow
+            that's so fuzzy even at times. None of them are corrupted
+            it's easy to just flatter yourself, please let everyone love you pleasure. Pain,
           </p>
           <Features>
             <div>

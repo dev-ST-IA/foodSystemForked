@@ -72,8 +72,8 @@ export default function ForgotPasswordModal({
         <Form onSubmit={handleSubmit(onSubmit)}>
           <h2>📬</h2>
           <p>
-            Igresa tu email y se te será enviado un link para que puedas
-            restaurar tu contraseña.
+          Enter your email and a link will be sent to you so you can
+            reset your password.
           </p>
 
           <UserEmailInput errors={errors} register={register} />

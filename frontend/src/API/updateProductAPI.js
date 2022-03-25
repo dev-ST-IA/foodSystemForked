@@ -30,7 +30,7 @@ async function updateProductAPI({
     }
 
     if (response.status === 403)
-      return alert("Se require rol de Administrador");
+      return alert("Administrator role required");
   } catch (err) {
     console.log(err);
   }

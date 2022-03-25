@@ -22,9 +22,9 @@ render(<MenuSearchBar setSearch={setSearch}
 it('display placeholder pass by props correctly', ()=>{
   
 render(<MenuSearchBar setSearch={setSearch}
- placeholder='Buscar por orderID...'/>)
+ placeholder='look for orderID...'/>)
 
-   expect(screen.getByRole('searchbox').placeholder).toEqual('Buscar por orderID...')
+   expect(screen.getByRole('searchbox').placeholder).toEqual('look for orderID...')
 
 })
 

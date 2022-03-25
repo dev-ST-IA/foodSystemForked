@@ -159,21 +159,21 @@ const  { prevSlide, nextSlide ,moveToSlide, slide} = useStaticInfoSlider()
       <Slide   data-testid='slider1'  slide={slide} index={1}>
         <SliderImage  src={BurgerSlide} alt= "burger"></SliderImage>
         <SliderContent>
-          <Span>las mejores ofertas</Span>
-          <SliderTitle>super descuento <br></br>hamburgesa</SliderTitle>
-          <ButtonPrimary as={Link} to="/menu">ordenar</ButtonPrimary></SliderContent>
+          <Span>Dutch Bank Cafe</Span>
+          <SliderTitle>Mouthwatering Foods <br></br>hamburgers</SliderTitle>
+          <ButtonPrimary as={Link} to="/menu">order</ButtonPrimary></SliderContent>
           </Slide>
          <Slide data-testid='slider2'  slide={slide} index={2}>
            <SliderImage src={PizzaSlide} alt= "pizza"></SliderImage>
-           <SliderContent><Span>las mejores ofertas</Span><SliderTitle>super descuento <br></br>Pizza</SliderTitle><ButtonPrimary as={Link} to="/menu">ordenar</ButtonPrimary></SliderContent>
+           <SliderContent><Span>the best deals</Span><SliderTitle>super discount <br></br>Pizza</SliderTitle><ButtonPrimary as={Link} to="/menu">order</ButtonPrimary></SliderContent>
            </Slide>
             <Slide data-testid='slider3'  slide={slide} index={3}>
               <SliderImage src={EmpanadaSlide} alt= "empanadas" >
 
               </SliderImage>
-              <SliderContent><Span>las mejores ofertas</Span>
-              <SliderTitle>super descuento <br></br>Empanadas</SliderTitle>
-              <ButtonPrimary as={Link} to="/menu">ordenar</ButtonPrimary>
+              <SliderContent><Span>the best deals</Span>
+              <SliderTitle>super discount <br></br>Empanadas</SliderTitle>
+              <ButtonPrimary as={Link} to="/menu">order</ButtonPrimary>
               </SliderContent>
               </Slide>
 

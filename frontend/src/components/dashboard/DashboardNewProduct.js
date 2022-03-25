@@ -14,7 +14,7 @@ function DashboardNewProduct() {
   return (
     <StyledSection>
       <LinksWrapper>
-        <GoBackLink to="/dashboard/myProducts">Regresar </GoBackLink>
+        <GoBackLink to="/dashboard/myProducts">To return </GoBackLink>
       </LinksWrapper>
 
       <CreateNewProductForm />

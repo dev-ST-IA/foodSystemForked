@@ -2,7 +2,7 @@ const data= {
   "success": true,
   "data": [
     {
-      "price": 150,
+      "price": 15,
       "active": true,
       "sold": 1,
       "_id": "60b8456e018ee624481c0ce6",
@@ -16,7 +16,7 @@ const data= {
       "img_id": "qld7cwaxilf2biv51i2o"
     },
     {
-      "price": 360,
+      "price": 36,
       "active": true,
       "sold": 1,
       "_id": "60af145ac113720808cb67f8",
@@ -30,7 +30,7 @@ const data= {
       "img_id": "kis8gvvsnyr8djo9do6s"
     },
     {
-      "price": 360,
+      "price": 30,
       "active": true,
       "sold": 1,
       "_id": "6098b6ac07be162608594f38",
@@ -44,7 +44,7 @@ const data= {
       "img_id": "av6duku0dg0j1raew0ee"
     },
     {
-      "price": 500,
+      "price": 50,
       "active": true,
       "sold": 1,
       "_id": "60989556d59eaa18d81ba442",
@@ -58,7 +58,7 @@ const data= {
       "img_id": "slbcofk1qv0qz3xyu0x4"
     },
     {
-      "price": 400,
+      "price": 40,
       "active": true,
       "sold": 0,
       "_id": "60982927ef5d4c28442a4b0b",
@@ -72,7 +72,7 @@ const data= {
       "img_id": "hpoks3pcjdvzozhny8bg"
     },
     {
-      "price": 350,
+      "price": 35,
       "active": true,
       "sold": 0,
       "_id": "6096b3413f7a62069073676f",

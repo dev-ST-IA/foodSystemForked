@@ -97,11 +97,11 @@ function MyProfile() {
             <UserInfo>{currentUser.email}</UserInfo>
             <dt>Teléfono: </dt>
             <UserInfo>
-              {currentUser.number || "Ningún númrero subministrado"}
+              {currentUser.number || "No number provided"}
             </UserInfo>
             <dt>Dirección: </dt>
             <UserInfo>
-              {currentUser.address || "Ningúna dirección subministrada"}
+              {currentUser.address || "No address provided"}
             </UserInfo>
           </dl>
           <br />

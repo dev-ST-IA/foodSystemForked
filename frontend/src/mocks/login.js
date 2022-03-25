@@ -290,10 +290,10 @@ const data = {
     _id: "60b681d69f37fb1f906c072d",
     name: "main admin",
     email: "admin@localhost.com",
-    password: "$2a$10$6FxFw8M4pFQVgO08WBhgveT5XU2cFM8iHnUUNHHlplrNJR74CaQWO",
+    password: "admin123_",
     createdAt: "2021-06-01T18:52:07.098Z",
     updatedAt: "2021-06-15T05:01:42.361Z",
-    address: "manuél belgrano 700, córdoba",
+    address: "123/4 Trincomalee",
     number: 3511234567,
   },
 };

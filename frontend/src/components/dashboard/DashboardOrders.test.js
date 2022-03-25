@@ -45,7 +45,7 @@ describe("orders fetch", () => {
         )
   )   
 
-      expect(screen.getByText('Pedidos')).toBeInTheDocument()
+      expect(screen.getByText('Requests')).toBeInTheDocument()
   expect(screen.getAllByRole('row')).toHaveLength(orders.length+1)
   expect(screen.getByText(orders[0].orderID)).toBeInTheDocument()
     expect(screen.getByText('$'+orders[0].total)).toBeInTheDocument()

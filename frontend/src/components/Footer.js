@@ -73,62 +73,63 @@ export default function Footer() {
         <FooterSection>
           <Logo src={logo} alt="logo"></Logo>
           <p>
-            El principal componente para un entorno saludable y de autoestima.
+            
+The main component for a healthy environment and self-esteem is your personal happiness and we at Dutch Bank Cafe make you happy with food.
           </p>
         </FooterSection>
         <FooterSection>
-          <h4>NUESTROS LOCALES</h4>
+          <h4>OUR LOCATION</h4>
           <address>
             <List>
               <ListItem>
                 <Icon>
                   <img src={locationIcon} alt="location"></img>
                 </Icon>{" "}
-                <Link> 984 Calle, Barrio, Córdoba</Link>
+                <Link> 88 Inner Harbour Rd, Trincomalee 31000</Link>
               </ListItem>
-              <ListItem>
+              {/* <ListItem>
                 <Icon>
                   <img src={locationIcon} alt="location"></img>
                 </Icon>{" "}
-                <Link>295 Calle, Barrio, Córdoba</Link>
-              </ListItem>
+                <Link>Address</Link>
+              </ListItem> */}
             </List>
           </address>
         </FooterSection>
         <FooterSection>
-          <h4>CONTACTO</h4>
+          <h4>Contact</h4>
           <address>
             <List>
               <ListItem>
                 <Icon>
                   <img src={phoneIcon} alt="phone"></img>
                 </Icon>{" "}
-                <Link href="tel://3513850064">351 3850064</Link>
+                <Link href="tel://0772690600">077 269 0600</Link>
               </ListItem>
               <ListItem>
                 <Icon>
                   <img src={emailcone} alt="email"></img>
                 </Icon>{" "}
-                <Link href="mailto:brisaabiaildiaz2000@gmial.com">
-                  brisaabiaildiaz2000@gmial.com
+                <Link href="mailto:DutchBankCafe@gmial.com">
+                DutchBankCafe@gmial.com
                 </Link>
               </ListItem>
             </List>
           </address>
         </FooterSection>
         <FooterSection>
-          <h4>HORARIOS DE APERTURA</h4>
+          <h4>OPENING TIMES</h4>
           <List>
             <ListItem>
-              <Hours> Lun - Vier --------- 9am - 12pm</Hours>
+              <Hours> Weekdays 7AM - 12pm</Hours>
             </ListItem>
             <ListItem>
-              <Hours> Sabados --------- 9am - 12pm</Hours>
+              <Hours> Weekends 7AM - 12pm</Hours>
             </ListItem>
             <ListItem>
               <Hours>
                 {" "}
-                Domingos --------- <Span>Cerrado</Span>
+                Sundays<Span> Closed</Span>
               </Hours>
             </ListItem>
           </List>

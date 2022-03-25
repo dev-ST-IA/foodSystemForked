@@ -116,11 +116,11 @@ function DashboardCategories() {
   return (
     <CategoriesPage>
       <DashboardNav />
-      <SectionTitle light>Categorías</SectionTitle>
+      <SectionTitle light>Categories</SectionTitle>
 
       <Wrapper>
         <FormCard>
-          <h4>Elimeinar categoría</h4>
+          <h4>Delete category</h4>
 
           <form name="editCategory" onSubmit={handleRenameSubmit}>
             <OptionList
@@ -138,7 +138,7 @@ function DashboardCategories() {
             {isDeleteFormLoading && <LoaderSpinner small />}
             <hr></hr>
 
-            <h4>Remombrar categoría</h4>
+            <h4>Rename Category</h4>
 
             <Input placeholder={"Renombrar Categoría"} name="categoryNewName" />
             {isRenameFormLoading && <LoaderSpinner small />}
@@ -147,14 +147,14 @@ function DashboardCategories() {
         </FormCard>
 
         <FormCard>
-          <h4>Crear una nueva categoría</h4>
+          <h4>Create a new category</h4>
 
           <form name="createCategory" onSubmit={handleCreateSubmit}>
-            <Input placeholder="Nueva categoría..." name="newCategory" />
+            <Input placeholder="New category..." name="newCategory" />
 
             {isCreateFormLoading && <LoaderSpinner small />}
 
-            <LoadButton as="input" type="submit" value="Cargar" />
+            <LoadButton as="input" type="submit" value="Charge" />
           </form>
         </FormCard>
       </Wrapper>

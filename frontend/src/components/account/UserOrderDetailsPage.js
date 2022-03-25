@@ -113,7 +113,7 @@ export default function OrderDetails() {
 
   return isLoading ? null : (
     <Page>
-      <GoBackLink to="/myAccount/myOrders">Regresar</GoBackLink>
+      <GoBackLink to="/myAccount/myOrders">To return</GoBackLink>
       <OrderId>
         Nº ID:<span>{thisOrder?.orderID}</span>
       </OrderId>
@@ -124,7 +124,7 @@ export default function OrderDetails() {
 
       <SplitSection>
         <ClientInfo>
-          <h3>Detalles de envio</h3>
+          <h3>Shipment details</h3>
           <p>
             <b>Destinatario:</b>
             {thisOrder?.client[0]?.name}
@@ -142,13 +142,13 @@ export default function OrderDetails() {
 
       <br></br>
 
-      <h3>Detalles del pedido</h3>
+      <h3>Order details</h3>
       <DetailTable>
         <thead>
           <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Unidades</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Units</th>
             <th>Total</th>
           </tr>
         </thead>

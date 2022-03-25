@@ -117,14 +117,14 @@ export default function ContactForm() {
           )}
           <TextInput
             type="text"
-            placeholder="Tu Nombre Completo..."
+            placeholder="Your full name..."
             name="userName"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*Required",
 
               pattern: {
                 value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü\s\w]+$/,
-                message: "*Nombre no valido",
+                message: "*Number not Valid",
               },
             })}
             style={{ borderColor: errors.userName && "#bf0000" }}
@@ -134,15 +134,15 @@ export default function ContactForm() {
           )}
           <TextInput
             type="email"
-            placeholder="Tu email..."
+            placeholder="Email"
             name="userEmail"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*Required",
 
               pattern: {
                 value:
                   /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
-                meassage: "*Email no valido",
+                meassage: "*Email not valid",
               },
             })}
             style={{ borderColor: errors.userEmail && "#bf0000" }}
@@ -153,10 +153,10 @@ export default function ContactForm() {
 
           <TextInput
             type="text"
-            placeholder="Asunto..."
+            placeholder="Business..."
             name="subject"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*Required",
             })}
             style={{ borderColor: errors.subject && "#bf0000" }}
           />
@@ -164,39 +164,38 @@ export default function ContactForm() {
             <ErrorMessage>{errors.userMessage.message}</ErrorMessage>
           )}
           <Textarea
-            placeholder="Tu mensaje..."
+            placeholder="your message..."
             name="userMessage"
             ref={register({
-              required: "*El campo es requerido",
+              required: "*Required",
               maxLength: {
                 value: 255,
-                message: "*Tu mensaje no debe exceder los 255 carácteres",
+                message: "*Your message must not exceed 255 characters",
               },
             })}
             style={{ borderColor: errors.userMessage && "#bf0000" }}
           />
-          <ButtonPrimary as="input" type="submit" value="Enviar mensaje" />
+          <ButtonPrimary as="input" type="submit" value="Send Message" />
         </Form>
       </FormSection>
       <InfoSection>
-        <ContactTitle>Contactenos</ContactTitle>
+        <ContactTitle>Contact Us</ContactTitle>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla accumsan
-          metus. Ipsum dolor sit amet, consectetur adipiscing elit nulla
-          accumsan.
+        88 Inner Harbour Rd, Trincomalee 31000.
+        Our premises is located on shore of the natural harbor of Trincomalee — the 5th natural harbor in the world. The site holds more than 150 years of history, as it was once the real ‘The Dutch Bank’ during early 1800's and then became the 6th Bank Of Ceylon Branch in Sri Lanka which is now the neighbor.
         </p>
         <List>
           <ListItem>
             <Icon>
               <img src={phoneIcon} alt="phone"></img>
             </Icon>{" "}
-            <ContactLink>+66 396 847 2637</ContactLink>
+            <ContactLink>Phone: 077 269 0600</ContactLink>
           </ListItem>
           <ListItem>
             <Icon>
               <img src={emaIlcon} alt="email"></img>
             </Icon>{" "}
-            <ContactLink>Hello@Burger.Com</ContactLink>
+            <ContactLink>dutchbankcafe@gmail.Com</ContactLink>
           </ListItem>
         </List>
         <SocilasMenu />

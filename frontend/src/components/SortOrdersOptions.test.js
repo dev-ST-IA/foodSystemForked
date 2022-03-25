@@ -10,10 +10,10 @@ it('display all sort options  with correct value', ()=>{
 const setSortPreferece = jest.fn()
 render(<SortOrdersOptions setSortPreferece={setSortPreferece}/>)
 
-expect(screen.getByText('Más recientes')).toHaveValue('-createdAt')
-expect(screen.getByText('Más antiguos')).toHaveValue('createdAt')
-expect(screen.getByText('Menor Monto')).toHaveValue('total')
-expect(screen.getByText('Mayor Monto')).toHaveValue('-total')
+expect(screen.getByText('most recent')).toHaveValue('-createdAt')
+expect(screen.getByText('oldest')).toHaveValue('createdAt')
+expect(screen.getByText('Lower Amount')).toHaveValue('total')
+expect(screen.getByText('Greater Amount')).toHaveValue('-total')
 
 
 
@@ -24,7 +24,7 @@ const setSortPreferece = jest.fn();
 
   render(<SortOrdersOptions  setSortPreferece={setSortPreferece}/>)
 
- expect(screen.getByRole('combobox')).toHaveDisplayValue('Más recientes')
+ expect(screen.getByRole('combobox')).toHaveDisplayValue('most recent')
 
 })
 
@@ -41,7 +41,7 @@ fireEvent.change(screen.getByRole('combobox'), {
 })
  expect(setSortPreferece.mock.calls.length).toBe(1)
 
- expect(screen.getByRole('combobox')).toHaveDisplayValue('Mayor Monto')
+ expect(screen.getByRole('combobox')).toHaveDisplayValue('Greater Amount')
 
  fireEvent.change(screen.getByRole('combobox'), {
   target: {
@@ -50,6 +50,6 @@ fireEvent.change(screen.getByRole('combobox'), {
 })
  expect(setSortPreferece.mock.calls.length).toBe(2)
 
- expect(screen.getByRole('combobox')).toHaveDisplayValue('Más recientes')
+ expect(screen.getByRole('combobox')).toHaveDisplayValue('most recent')
 
 })

@@ -175,7 +175,7 @@ export default function Header() {
             Menu
           </StyledLink>
           <StyledLink to="/contact" onClick={closeNav}>
-            Contacto
+            Contact
           </StyledLink>
 
           {(isAdmin === true || isModerator === true) && (
@@ -187,7 +187,7 @@ export default function Header() {
           {isLogin ? (
             <Fragment>
               <StyledLink to="/myAccount/myOrders" onClick={closeNav}>
-                Mis Pedidos
+                My Orders
               </StyledLink>
               <Link to="/myAccount/myProfile" onClick={closeNav}>
                 <IconButton>
@@ -202,7 +202,7 @@ export default function Header() {
                 to="/authentication/singUp"
                 onClick={closeNav}
               >
-                Sing Up
+                Sign Up
               </StyledLink>
               <StyledLink to="/authentication/login" onClick={closeNav}>
                 Login

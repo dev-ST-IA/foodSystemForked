@@ -17,9 +17,9 @@ export default function FilterOrdersStateOptions({
       name="filterOrdersByState"
       onChange={(e) => handelChange(e)}
     >
-      <Option value="all">Todos</Option>
-      <Option value="finish">Liquidados</Option>
-      <Option value="unfinished">Pendientes</Option>
+      <Option value="all">All</Option>
+      <Option value="finish">Finished</Option>
+      <Option value="unfinished">Unfinished</Option>
     </OptionList>
   );
 }

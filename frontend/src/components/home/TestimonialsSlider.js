@@ -58,7 +58,7 @@ const QuoteIcon = styled.img`
   margin: 0 auto;
   margin-bottom: 10px;
 `;
-
+const reviews = "https://jsonplaceholder.typicode.com/comments"
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const [error, setError] = useState(false);
@@ -69,7 +69,7 @@ export default function Testimonials() {
       setError(false);
       try {
         const res = await fetch(
-          "https://jsonplaceholder.typicode.com/comments"
+          reviews
         );
         const data = await res.json();
 

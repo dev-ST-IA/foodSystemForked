@@ -22,7 +22,7 @@ async function uploadUserAPI({
     }
 
     if (response.status === 403)
-      return alert("Se require rol de Administrador");
+      return alert("Administrator role required");
 
     setServerError(json.message);
   } catch (err) {

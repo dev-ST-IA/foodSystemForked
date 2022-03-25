@@ -56,13 +56,13 @@ export default function ForgotPassword() {
           <UserPasswordInput
             register={register}
             errors={errors}
-            placeholder="Nueva contraseña..."
+            placeholder="New Password..."
           />
           <UserPasswordInput
             register={register}
             errors={errors}
             name="confirmPassword"
-            placeholder="Confirnmar contraseña..."
+            placeholder="confirm password..."
           />
           <ErrorServerMessage>{serverError}</ErrorServerMessage>
 

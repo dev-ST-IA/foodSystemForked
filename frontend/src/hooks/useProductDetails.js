@@ -43,7 +43,7 @@ const [isLoaded,setIsLoaded] = useState(false)
 
   }catch(err){
     if(err.name === 'AbortError'){
-   console.log('Fetch Canseled: caught abort')
+   console.log('Fetch Cancelled: caught abort')
  }else{
 
      console.log(err)

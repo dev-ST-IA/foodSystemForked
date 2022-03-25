@@ -13,7 +13,7 @@ const DashboardEditProduct = () => {
   return (
     <StyledSection>
       <LinksWrapper>
-        <GoBackLink to="/dashboard/myProducts">Regresar</GoBackLink>
+        <GoBackLink to="/dashboard/myProducts">To return</GoBackLink>
       </LinksWrapper>
       <EditProductForm />
     </StyledSection>

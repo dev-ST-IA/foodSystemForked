@@ -113,13 +113,13 @@ function UserInfoCell({ user, handelClick }) {
         <Fragment>
           {user?.number && (
             <p>
-              <b>Número:</b>
+              <b>Number:</b>
               {user?.number}
             </p>
           )}
           {user?.address && (
             <p>
-              <b>Dirección:</b>
+              <b>Direction:</b>
               {user?.address}
             </p>
           )}
@@ -158,7 +158,7 @@ function DashboardUsers() {
   return (
     <Page>
       <DashboardNav />
-      <SectionTitle>Usuarios</SectionTitle>
+      <SectionTitle>Users</SectionTitle>
       <EditUserModal
         user={editingUser}
         isEditing={isEditing}
@@ -168,7 +168,7 @@ function DashboardUsers() {
       <TablesContainer>
         <Table>
           <TableHeader>
-            <TableTitle>Usuarios</TableTitle>
+            <TableTitle>Users</TableTitle>
           </TableHeader>
 
           {normalUsers.map((user) => (
@@ -181,7 +181,7 @@ function DashboardUsers() {
         </Table>
         <Table>
           <TableHeader>
-            <TableTitle>Admins y Mediadores</TableTitle>
+            <TableTitle>Admins</TableTitle>
           </TableHeader>
           {adminsAndModerators.map((user) => (
             <UserInfoCell

@@ -20,7 +20,7 @@ setLatestProducts([...json.data])
 setIsloading(false)
       }catch(err){
  if(err.name === 'AbortError'){
-   console.log('Fetch Canseled: caught abort')
+   console.log('Fetch Cancelled: caught abort')
  }else{
 
 let counter = ref.current

@@ -41,7 +41,7 @@ export default function UpdateNewProductForm() {
           enctype="multipart/form-data"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <FormTitle>Editar {productToEdit?.name}</FormTitle>
+          <FormTitle>Edit {productToEdit?.name}</FormTitle>
 
           <ProductNameInput
             register={register}

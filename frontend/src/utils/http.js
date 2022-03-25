@@ -1,3 +1,4 @@
+const base_url = "https://fast-food-delivery-app.herokuapp.com"
 async function POST(url, info, token, type) {
   const headers = new Headers();
   headers.append("Accept", "application/json");
@@ -15,7 +16,9 @@ async function POST(url, info, token, type) {
     body,
   };
 
-  const response = await fetch(url, setting);
+
+  const apiUrl = base_url + url
+  const response = await fetch(apiUrl, setting);
   const json = await response.json();
   return { response, json };
 }
@@ -34,7 +37,9 @@ async function PUT(url, info, token, type) {
     headers: headers,
     body,
   };
-  const response = await fetch(url, setting);
+
+  const apiUrl = base_url + url
+  const response = await fetch(apiUrl, setting);
   const json = await response.json();
   return { response, json };
 }
@@ -48,7 +53,9 @@ async function DELETE(url, token) {
     method: "DELETE",
     headers: headers,
   };
-  const response = await fetch(url, setting);
+
+  const apiUrl = base_url + url
+  const response = await fetch(apiUrl, setting);
   const json = await response.json();
   return { response, json };
 }
@@ -61,7 +68,9 @@ async function GET(url, token) {
     method: "GET",
     headers: headers,
   };
-  const response = await fetch(url, setting);
+
+  const apiUrl = base_url + url
+  const response = await fetch(apiUrl, setting);
   const json = await response.json();
   return { response, json };
 }

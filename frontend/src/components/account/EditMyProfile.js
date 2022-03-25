@@ -102,18 +102,18 @@ function CellphoneInput({ register, errors, placeholder, defaultValue }) {
         type="text"
         defaultValue={defaultValue || ""}
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           minLength: {
             value: 9,
-            message: "*Teléfono Invalido",
+            message: "*invalid phone",
           },
           maxLength: {
             value: 10,
-            message: "*Teléfono Invalido",
+            message: "*invalid phone",
           },
           pattern: {
             value: /[0-9]/,
-            message: "*Solo se aceptan números",
+            message: "*Only numbers are accepted",
           },
         })}
         style={{ borderColor: errors.userNumber && "#bf0000" }}
@@ -127,7 +127,7 @@ function CityAddressOptions({ register, defaultValue }) {
       name="userCityAddress"
       defaultValue={defaultValue}
       ref={register({
-        required: "*El campo es requrido",
+        required: "*The field is required",
       })}
     >
       <Option value="Córdoba">Córdoba</Option>
@@ -149,7 +149,7 @@ function StreetAddressInput({ errors, placeholder, register, defaultValue }) {
         name="userStreetAddress"
         defaultValue={defaultValue || ""}
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
         })}
         style={{ borderColor: errors.userStreetAddress && "#bf0000" }}
       />
@@ -170,15 +170,15 @@ function StreetNumberInput({ errors, placeholder, register, defaultValue }) {
         name="userStreetNumber"
         defaultValue={defaultValue || ""}
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
 
           maxLength: {
             value: 4,
-            message: "*Número Invalido",
+            message: "*Invalid Number",
           },
           pattern: {
             value: /[0-9]/,
-            message: "*Solo se aceptan números",
+            message: "*Only numbers are accepted",
           },
         })}
         style={{ borderColor: errors.userStreetNumber && "#bf0000" }}
@@ -221,7 +221,7 @@ function EditMyProfile() {
           defaultValue={defaultsValues.number}
           errors={errors}
           register={register}
-          placeholder="Tu telèfono..."
+          placeholder="Your phone..."
         />
 
         <CityAddressOptions
@@ -232,14 +232,14 @@ function EditMyProfile() {
         <StreetAddressInput
           errors={errors}
           register={register}
-          placeholder="Calle..."
+          placeholder="Street..."
           defaultValue={defaultsValues.street}
         />
 
         <StreetNumberInput
           errors={errors}
           register={register}
-          placeholder="Número de puerta..."
+          placeholder="Port number..."
           defaultValue={defaultsValues.streetNumber}
         />
         <InputWrapper>
@@ -255,13 +255,13 @@ function EditMyProfile() {
               errors={errors}
               register={register}
               name="userPassword"
-              placeholder="Tu contraseña..."
+              placeholder="Your password..."
             />
             <UserNewPasswordInput
               errors={errors}
               register={register}
               name="newPassword"
-              placeholder="Nueva contraseña..."
+              placeholder="New Password..."
             />
           </>
         ) : null}

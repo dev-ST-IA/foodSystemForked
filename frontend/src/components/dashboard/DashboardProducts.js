@@ -95,7 +95,7 @@ function DashboardProducts() {
   return (
     <StyledSection>
       <DashboardNav />
-      <SectionTitle>mis productos</SectionTitle>
+      <SectionTitle>my products</SectionTitle>
 
       <SearchBar defaultValue={title} setSearch={setTitle} />
       <FiltersBoard>
@@ -117,7 +117,7 @@ function DashboardProducts() {
 
       {!isLoading && products?.length === 0 ? (
         <NotFoundMessage>
-          No se han encontrado coincidencias, intenta de nuevo!!
+          No matches found, please try again!!
         </NotFoundMessage>
       ) : (
         <StyledProductsSection isLoading={isLoading}>

@@ -92,7 +92,7 @@ document.querySelector('body').scrollTo(0,100)
 
       } catch (err) {
         if (err.name === 'AbortError') {
-          console.log('Fetch Canseled: caught abort')
+          console.log('Fetch Canceled: caught abort')
         } else {
 
           console.log(err)

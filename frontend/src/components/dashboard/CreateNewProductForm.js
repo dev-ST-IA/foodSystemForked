@@ -187,7 +187,7 @@ export function CategoriesOptionsInput({ register, categories, defaultValue }) {
       name="category"
       defaultValue={defaultValue || categories[0]}
       ref={register({
-        required: "*El campo es requrido",
+        required: "*The field is required",
       })}
     >
       {categories?.map((cat) => (
@@ -207,12 +207,12 @@ export function ProductNameInput({ register, errors, defaultValue }) {
 
       <TextInput
         style={{ borderColor: errors.productName && "#bf0000" }}
-        placeholder="Nombre..."
+        placeholder="Name..."
         data-testid="name"
         defaultValue={defaultValue || ""}
         name="name"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*Required",
         })}
       />
     </Fragment>
@@ -227,15 +227,15 @@ export function ProductSizeInput({ register, errors, defaultValue }) {
       )}
       <TextInput
         style={{ borderColor: errors.size && "#bf0000" }}
-        placeholder="Cantidad/Tamaño..."
+        placeholder="Quantity/Size..."
         data-testid="size"
         name="size"
         defaultValue={defaultValue || ""}
         ref={register({
-          required: "*El campo es requerido",
+          required: "*Required",
           pattern: {
             value: /^(?:[0-9]+\s\w+[a-z]|[a-z]+[0-9])[a-z0-9]*$/i,
-            message: "*Se require de un valor y unidad",
+            message: "*A value and unit is required",
           },
         })}
       />
@@ -250,13 +250,13 @@ export function ProductDescriptionTextArea({ register, errors, defaultValue }) {
         <ErrorMessage role="alert">{errors.description.message}</ErrorMessage>
       )}
       <Description
-        placeholder="Descripción..."
+        placeholder="Description..."
         style={{ borderColor: errors.description && "#bf0000" }}
         defaultValue={defaultValue || ""}
         name="description"
         data-testid="description"
         ref={register({
-          required: "*El campo es requerido",
+          required: "*Required",
         })}
       ></Description>
     </Fragment>
@@ -270,16 +270,16 @@ export function ProductPriceInput({ register, errors, defaultValue }) {
       )}
 
       <TextInput
-        placeholder="Precio..."
+        placeholder="Price..."
         style={{ borderColor: errors.productPrice && "#bf0000" }}
         name="price"
         data-testid="price"
         defaultValue={defaultValue || ""}
         ref={register({
-          required: "*El campo es requerido",
+          required: "*The field is required",
           pattern: {
             value: /\d+/,
-            message: "*Se admiten solo números",
+            message: "*Only numbers are allowed",
           },
         })}
       />
@@ -290,7 +290,7 @@ export function ImageUploader({ register, errors, isNotRequired }) {
   return (
     <Fragment>
       {errors.productImg && (
-        <ErrorMessage role="alert">*El Campo es requerido</ErrorMessage>
+        <ErrorMessage role="alert">*The field is required</ErrorMessage>
       )}
 
       <DropZone
@@ -307,8 +307,8 @@ export function ImageUploader({ register, errors, isNotRequired }) {
 export function FormButtons() {
   return (
     <ButtonsWrapper>
-      <LoadButton as="input" type="submit" value="Cargar" />
-      <ResetButton as="input" type="reset" value="Abortar" />
+      <LoadButton as="input" type="submit" value="Charge" />
+      <ResetButton as="input" type="reset" value="Abort" />
     </ButtonsWrapper>
   );
 }
@@ -317,7 +317,7 @@ export function ProductState(props) {
 
   return (
     <CheckboxWrapper>
-      <label htmlFor="state">Publicar:</label>
+      <label htmlFor="state">To post:</label>
       <input id="state" type="checkbox" defaultChecked={state} name="state" />
     </CheckboxWrapper>
   );
@@ -341,7 +341,7 @@ export default function UpdateNewProductForm() {
           name="productsFactory"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <FormTitle>Cargar nuevos productos</FormTitle>
+          <FormTitle>upload new products</FormTitle>
 
           <ProductNameInput register={register} errors={errors} />
 

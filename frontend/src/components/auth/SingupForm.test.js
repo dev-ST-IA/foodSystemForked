@@ -13,7 +13,7 @@ describe("form validations", () => {
         status: 200,
         json: () =>
           Promise.resolve({
-            message: "sing up successfully",
+            message: "sign up successfully",
           }),
       })
     );
@@ -43,35 +43,35 @@ describe("form validations", () => {
   it("display error when input is left empty on submit", async () => {
     await act(async () => fireEvent.submit(screen.getByTestId("singUpForm")));
 
-    expect(screen.getAllByText("*El campo es requrido")).toHaveLength(4);
+    expect(screen.getAllByText("*The field is required")).toHaveLength(4);
   });
 
   it("diplay password error when input  is left empty after focus", async () => {
     await act(async () => fireEvent.focus(screen.getByTestId("passwordInput")));
     await act(async () => fireEvent.blur(screen.getByTestId("passwordInput")));
 
-    expect(screen.getByText("*El campo es requrido")).toBeInTheDocument();
+    expect(screen.getByText("*The field is required")).toBeInTheDocument();
   });
 
   it("diplay name  error when input  is left empty after focus", async () => {
     await act(async () => fireEvent.focus(screen.getByTestId("nameInput")));
     await act(async () => fireEvent.blur(screen.getByTestId("nameInput")));
 
-    expect(screen.getByText("*El campo es requrido")).toBeInTheDocument();
+    expect(screen.getByText("*The field is required")).toBeInTheDocument();
   });
 
   it("diplay last name error message", async () => {
     await act(async () => fireEvent.focus(screen.getByTestId("lastNameInput")));
     await act(async () => fireEvent.blur(screen.getByTestId("lastNameInput")));
 
-    expect(screen.getByText("*El campo es requrido")).toBeInTheDocument();
+    expect(screen.getByText("*The field is required")).toBeInTheDocument();
   });
 
   it("diplay email error message", async () => {
     await act(async () => fireEvent.focus(screen.getByTestId("emailInput")));
     await act(async () => fireEvent.blur(screen.getByTestId("emailInput")));
 
-    expect(screen.getByText("*El campo es requrido")).toBeInTheDocument();
+    expect(screen.getByText("*The field is required")).toBeInTheDocument();
   });
 
   it("diplay email  error when input  is left empty after focus", async () => {
@@ -84,7 +84,7 @@ describe("form validations", () => {
     );
     await act(async () => fireEvent.blur(screen.getByTestId("emailInput")));
 
-    expect(screen.getByText("*Email no valido")).toBeInTheDocument();
+    expect(screen.getByText("*Email not valid")).toBeInTheDocument();
 
     await act(async () =>
       fireEvent.change(screen.getByTestId("emailInput"), {
@@ -96,7 +96,7 @@ describe("form validations", () => {
 
     await act(async () => fireEvent.blur(screen.getByTestId("emailInput")));
 
-    expect(screen.queryByText("*Email no valido")).not.toBeInTheDocument();
+    expect(screen.queryByText("*Email not valid")).not.toBeInTheDocument();
   });
 
   it("diplay last name  error when input  is left empty after focus", async () => {
@@ -110,54 +110,54 @@ describe("form validations", () => {
 
     await act(async () => fireEvent.blur(screen.getByTestId("lastNameInput")));
 
-    expect(screen.getByText("*Apellido no valido")).toBeInTheDocument();
+    expect(screen.getByText("*Invalid last name")).toBeInTheDocument();
 
     await act(async () =>
       fireEvent.change(screen.getByTestId("lastNameInput"), {
         target: {
-          value: "Díaz",
+          value: "Diaz",
         },
       })
     );
 
     await act(async () => fireEvent.blur(screen.getByTestId("lastNameInput")));
 
-    expect(screen.queryByText("*Apellido no valido")).not.toBeInTheDocument();
+    expect(screen.queryByText("*Invalid last name")).not.toBeInTheDocument();
   });
 
   it("diplay name error message", async () => {
     await act(async () =>
       fireEvent.change(screen.getByTestId("nameInput"), {
         target: {
-          value: "brisa diaz",
+          value: "Dutch Bank Cafe",
         },
       })
     );
     await act(async () => fireEvent.blur(screen.getByTestId("nameInput")));
 
-    expect(screen.getByText("*Nombre no valido")).toBeInTheDocument();
+    expect(screen.getByText("*invalid name")).toBeInTheDocument();
 
     await act(async () =>
       fireEvent.change(screen.getByTestId("nameInput"), {
         target: {
-          value: "brisa  ",
+          value: "Dutch  ",
         },
       })
     );
     await act(async () => fireEvent.blur(screen.getByTestId("nameInput")));
 
-    expect(screen.getByText("*Nombre no valido")).toBeInTheDocument();
+    expect(screen.getByText("*invalid name")).toBeInTheDocument();
 
     await act(async () =>
       fireEvent.change(screen.getByTestId("nameInput"), {
         target: {
-          value: "brisa",
+          value: "Dutch ",
         },
       })
     );
     await act(async () => fireEvent.blur(screen.getByTestId("nameInput")));
 
-    expect(screen.queryByText("*Nombre no valido")).not.toBeInTheDocument();
+    expect(screen.queryByText("*invalid name")).not.toBeInTheDocument();
   });
 
   it("diplay password error message", async () => {
@@ -171,7 +171,7 @@ describe("form validations", () => {
     await act(async () => fireEvent.blur(screen.getByTestId("passwordInput")));
 
     expect(
-      screen.getByText("*El largo mínimo es de 5 carácteres")
+      screen.getByText("*The minimum length is 5 characters")
     ).toBeInTheDocument();
 
     await act(async () =>
@@ -184,7 +184,7 @@ describe("form validations", () => {
     await act(async () => fireEvent.blur(screen.getByTestId("passwordInput")));
 
     expect(
-      screen.queryByText("*El largo mínimo es de 5 carácteres")
+      screen.queryByText("*The minimum length is 5 characters")
     ).not.toBeInTheDocument();
   });
 
@@ -192,7 +192,7 @@ describe("form validations", () => {
     await act(async () =>
       fireEvent.change(screen.getByTestId("nameInput"), {
         target: {
-          value: "brisa",
+          value: "Dutch",
         },
       })
     );
@@ -204,14 +204,14 @@ describe("form validations", () => {
     await act(async () =>
       fireEvent.change(screen.getByTestId("lastNameInput"), {
         target: {
-          value: "Díaz",
+          value: "Diaz",
         },
       })
     );
 
     await act(async () => fireEvent.blur(screen.getByTestId("lastNameInput")));
 
-    expect(screen.getByTestId("lastNameInput")).toHaveValue("Díaz");
+    expect(screen.getByTestId("lastNameInput")).toHaveValue("Diaz");
 
     await act(async () =>
       fireEvent.change(screen.getByTestId("passwordInput"), {
@@ -284,7 +284,7 @@ describe("handle fetch exeptions", () => {
     await act(async () =>
       fireEvent.change(screen.getByTestId("lastNameInput"), {
         target: {
-          value: "Díaz",
+          value: "Diaz",
         },
       })
     );

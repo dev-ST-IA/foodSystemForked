@@ -103,11 +103,11 @@ export default function DashboardOrders({ closeNotification }) {
   return (
     <Page isLoading={isLoading}>
       <DashboardNav />
-      <SectionTitle>Pedidos</SectionTitle>
+      <SectionTitle>Requests</SectionTitle>
 
       <SearchBar
         defaultValue={orderID}
-        placeholder="Número de orden..."
+        placeholder="Number of order..."
         setSearch={setOrderID}
       />
       <FiltersBoard>
@@ -126,7 +126,7 @@ export default function DashboardOrders({ closeNotification }) {
         data-testid="refresh-button"
         onClick={() => handleRefresh()}
       >
-        <RefreshIcon src={refreshIcon} title="Refrescar Página" />
+        <RefreshIcon src={refreshIcon} title="Refresh Page" />
       </RefreshButton>
       {isLoading ? <LoaderSpinner /> : null}
 
@@ -134,7 +134,7 @@ export default function DashboardOrders({ closeNotification }) {
 
       {!isLoading && !isFirstRender && orders?.length === 0 && (
         <NotFoundMessage>
-          No se han encontrado coincidencias, intenta de nuevo!!
+          No matches found, please try again!!
         </NotFoundMessage>
       )}
 
@@ -143,11 +143,11 @@ export default function DashboardOrders({ closeNotification }) {
           <OrdersTable>
             <TableHead>
               <tr>
-                <th>Nº de Pedido</th>
-                <th>Fecha</th>
-                <th>Dirección</th>
+                <th>Order No.</th>
+                <th>Date</th>
+                <th>Direction</th>
                 <th>Total</th>
-                <th>Estado</th>
+                <th>Condition</th>
               </tr>
             </TableHead>
             <tbody>

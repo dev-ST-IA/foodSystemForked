@@ -12,9 +12,9 @@ beforeEach(() => render( <FilterCategoryOptions  setCategoryPreferece={setCatego
 
 it('has "all categorys" as a default value', ()=>{
 
-  expect(screen.getByText('Todas las categorías')).toHaveValue('all')
+  expect(screen.getByText('All Categories')).toHaveValue('all')
    
-   expect(screen.getByRole('combobox')).toHaveDisplayValue('Todas las categorías')
+   expect(screen.getByRole('combobox')).toHaveDisplayValue('All Categories')
 
 } )
 

@@ -42,7 +42,7 @@ const  {handleConfirmation,nextStep} = useAdminOrderStateChart({orderId,makeRefr
        <ProcessInfo  key ={index}>
            <h4>{state?.name}</h4>
            <ConfirmationButton disabled={state !== nextStep && true} onClick={(e) =>
-             handleConfirmation(e,state?.name)} >Confirmar</ConfirmationButton>
+             handleConfirmation(e,state?.name)} >Confirm</ConfirmationButton>
          </ProcessInfo>
 
   

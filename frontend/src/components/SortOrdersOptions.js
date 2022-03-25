@@ -6,10 +6,10 @@ export default function SortOrdersOptions({setSortPreferece,defaultValue}){
 
 return(
 <OptionList  defaultValue={defaultValue} name="sortProductBy" onChange={(e) => setSortPreferece(e.target.value)}>
-<Option value="-createdAt" >Más recientes</Option>
-<Option value="createdAt" >Más antiguos</Option>
-<Option value="total" >Menor Monto</Option>
-<Option value="-total">Mayor Monto</Option>
+<Option value="-createdAt" >CreatedAt</Option>
+<Option value="createdAt" >CreatedAt</Option>
+<Option value="total" >total</Option>
+<Option value="-total">total</Option>
 
 </OptionList>
 

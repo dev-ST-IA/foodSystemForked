@@ -143,7 +143,7 @@ export default function UserOrdersPage({ closeNotification }) {
     <Page isLoading={isLoading}>
       {isLoading ? <LoaderSpinner /> : null}
 
-      <SectionTitle light>Mis Pedidos</SectionTitle>
+      <SectionTitle light>My orders</SectionTitle>
 
       <RefreshButton onClick={() => handleRefresh()}>
         <RefreshIcon
@@ -158,10 +158,10 @@ export default function UserOrdersPage({ closeNotification }) {
       {!isLoading && !isFirstRender && orders?.length === 0 && (
         <NotFoundMessage>
           <NotFoundIcon>👩🏻&zwj;🍳</NotFoundIcon>
-          <h3>Ningún pedido realizado, tienes hambre?</h3>
+          <h3>No order placed, are you hungry?</h3>
 
           <ButtonPrimary small as={Link} to="/menu">
-            Ver Menú
+          See Menu
           </ButtonPrimary>
         </NotFoundMessage>
       )}
@@ -171,12 +171,12 @@ export default function UserOrdersPage({ closeNotification }) {
           <OrdersTable>
             <TableHead>
               <tr>
-                <th>Nº de Pedido</th>
-                <th>Fecha</th>
-                <th>Dirección</th>
+                <th>Order No.</th>
+                <th>Date</th>
+                <th>Direction</th>
                 <th>Total</th>
-                <th>Estado</th>
-                <th>Acciones</th>
+                <th>Condition</th>
+                <th>Actions</th>
               </tr>
             </TableHead>
             <tbody>
@@ -220,7 +220,7 @@ export default function UserOrdersPage({ closeNotification }) {
                       }
                       onClick={(e) => deleteOrder(e, order._id)}
                     >
-                      Cancelar Pedido
+                      cancel order
                     </CancelOrderButton>
                   </td>
                 </tr>
